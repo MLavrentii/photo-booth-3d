@@ -1,0 +1,88 @@
+/* ---------- GENERAL LAYOUT ---------- */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #111;
+  color: white;
+}
+
+header {
+  background: #222;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  padding: 10px 20px;
+  background: #181818;
+  border-bottom: 1px solid #333;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 4px;
+}
+
+.controls select,
+.controls input[type="file"],
+.controls button {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #444;
+}
+
+/* ---------- PREVIEW AREA ---------- */
+
+.preview-wrapper {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: black;
+}
+
+/* This is now a RELATIVE container for media + frame */
+.preview-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Camera/video/photo always fills screen EXACTLY */
+.preview-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ---------- FRAME OVERLAY ---------- */
+
+.frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: move;
+  pointer-events: auto;
+}
